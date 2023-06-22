@@ -70,10 +70,9 @@ body {
 }
 
 #tweet-quote {
-    display: inline-block;
-    width: 8%;
+    flex: 0.1;
     font-size: 0.8rem;
-    margin-right: 0;
+    padding: 10px 10px;
     font-size: 1.1rem;
     background-color: #333;
     transition: background-color 1s ease-in-out;
@@ -81,10 +80,9 @@ body {
 }
 
 a#tumblr-quote {
-    display: inline-block;
     font-size: 0.8rem;
-    width: 8%;
-    margin-right: 0;
+    flex: 0.1;
+    padding: 10px 10px;
     font-size: 1.1rem;
     color:white;
     background-color: #333;
@@ -96,16 +94,28 @@ a#tumblr-quote {
     opacity: 0.8;
 }
 
-button#new-quote {
-    display: inline-block;
-    margin-left: auto;
-    width: 20%;
-    padding: 10px 20px;
+.btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
+}
+
+#new-quote {
+    flex: 0.2;
+    margin-left: auto;
+    padding: 10px 20px;
     font-size: 0.8rem;
     font-weight: 600;
     color: #fff;
     background-color: #333;
     transition: background-color 1s ease-in-out;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #quote-box {
+        width: 80%;
+    }
 }
